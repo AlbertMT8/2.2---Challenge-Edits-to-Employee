@@ -1,5 +1,7 @@
 Employee Class README
+
 Overview
+
 This Java program defines an Employee class that demonstrates inheritance by extending a Person class. The Employee class inherits properties like name and address from Person and introduces a unique id property specific to employees. This code is part of Unit 2, Lesson 2 and focuses on creating inheritance relationships in Java.
 
 Class Structure
