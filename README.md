@@ -1,64 +1,42 @@
-Employee Class README
+# Employee Class in Java
 
-Overview
+This Java program is part of **Unit 2, Lesson 2**, focusing on creating inheritance relationships in Java. It demonstrates how to create a subclass, `Employee`, which extends a `Person` superclass. An `Employee` inherits properties from `Person` and includes additional features specific to employees, such as an ID number.
 
-This Java program defines an Employee class that demonstrates inheritance by extending a Person class. The Employee class inherits properties like name and address from Person and introduces a unique id property specific to employees. This code is part of Unit 2, Lesson 2 and focuses on creating inheritance relationships in Java.
+## Class Overview
 
-Class Structure
-The Employee class extends the Person class and includes:
+### Employee
+The `Employee` class is a subclass of `Person` and represents an employee with a unique ID number. An `Employee` inherits the `name` and `address` attributes from `Person`, and includes additional functionality.
 
-Fields:
+#### Attributes
+- `id` (int): A unique identifier for the employee.
 
-id: an integer representing the employee's unique ID.
-Constructors:
+#### Constructors
+1. **Employee(String name, String address, int id)**
+   - A parameterized constructor that initializes the `name`, `address`, and `id` of the `Employee`.
+   
+2. **Employee(int id)**
+   - A constructor that initializes only the `id`, with `name` and `address` set to default values (handled by the `Person` superclass).
+   
+3. **Employee(String name, int id)**
+   - A constructor that initializes the `name` and `id` with a default address (handled by the `Person` superclass).
 
-Employee(String name, String address, int id): Initializes an Employee with a name, address, and ID.
-Employee(int id): Initializes an Employee with a given ID, setting name and address to default values from Person.
-Employee(String name, int id): Initializes an Employee with a given name and ID, with a default address from Person.
-Methods:
+#### Methods
 
-getID(): Returns the employee's ID.
-toString(): Returns a string representation of the Employee, including the name, address, and ID.
-Main Method for Testing:
+- **getID()**: Returns the `id` of the `Employee`.
+  
+- **toString()**: Returns a string representation of the `Employee`, including `name`, `address`, and `id`.
 
-Demonstrates creating and printing Employee objects with various constructor options.
-Getting Started
-To use this code:
+## Code Example
 
-Ensure that the Person class is defined and accessible in the same package or directory as the Employee class.
-Compile and run the Employee class.
-Example Usage
-In the main method:
+The `main` method in the `Employee` class provides a way to test the functionality of the class. Here is an example of how to create and use an `Employee` object:
 
-java
-Copy code
-Employee e = new Employee("Willy Wonka", "Chocolate Factory", 123456);
-System.out.println(e);
+```java
+public static void main(String[] args) {
+    System.out.println("Running the Employee class...");
+    Employee e = new Employee("Willy Wonka", "Chocolate Factory", 123456);
+    System.out.println(e);
 
-// Uncomment to test the additional constructor
-Employee e2 = new Employee("Oompa Loompa", 3674);
-System.out.println(e2);
-Expected output:
-
-vbnet
-Copy code
-Running the Employee class...
-Name: Willy Wonka
-Address: Chocolate Factory
-Employee ID Number: 123456
-
-Name: Oompa Loompa
-Address: [default address from Person class]
-Employee ID Number: 3674
-Features
-Inheritance: The Employee class inherits from Person, demonstrating basic inheritance in Java.
-Multiple Constructors: The class includes multiple constructors, showcasing constructor overloading and the use of default values from a superclass.
-toString Method: Provides a readable format for displaying an Employee's information, including inherited and unique properties.
-Notes
-Aspire To Do: The code includes an "Aspire To Do" section, encouraging you to uncomment and complete the constructor Employee(String name, int i) and test the output.
-Default Values: The Employee(int id) constructor uses default values for name and address set by the Person class, illustrating constructor chaining in inheritance.
-Requirements
-Java Development Kit (JDK) 8 or above.
-A Person class with name and address fields and appropriate constructors.
-License
-This code is part of a learning exercise and is intended for educational use.
+    // ASPIRE TO DO
+    Employee e2 = new Employee("Oompa Loompa", 3674);
+    System.out.println(e2);
+}
